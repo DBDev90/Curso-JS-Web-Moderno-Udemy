@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+         * /*SELETOR UNIVERSAL*/
+        /* .tag */ /*SELETOR DE CLASSE*/
+        /* #aprovados */ /*SELETOR DE ID*/
+        /* #aninhado > div */ /*SELETOR DE FILHO DIRETO*/
+        /* #aninhado section */ /*SELETOR DESCENDENTE DIRETO*/
+        /* p + ul */ /*SELETOR DE IRMÃO ADJACENTE*/
+        /* p ~ ol */ /*SELETOR DE TAG QUE POSSUEM O MESMO PAI*/
+        /* [feira] */ /*SELETOR DE PROPRIEDADE*/
+        /* [feira~=escritorio] */ /*PEGA POSSÍVEIS ELEMENTOS*/
+        /* span:nth-child */ /*SELETOR QUE ENVOLVE FILHOS*/
+        /* section > :nth-child(odd) */ /*SELETOR DE FILHOS ÍMPARES*/
+        /* section > :nth-child(even) */ /*SELETOR DE FILHOS PARES*/
+        /* section > :nth-child(odd), ul */
+        /* section > span:nth-of-type(2) */ /*SELETOR DE FILHOS DIRETO DO TIPO SPAN*/
+        {
+            color: #ff0;
+            background-color: #f77;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
